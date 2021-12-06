@@ -3,7 +3,7 @@
 ## Description
 
 This project is the second project of udacity nanodegree front end with under Egypt Future Work is Digital Scholarship. starter code provided by udacity
-[landing page starter code](https://github.com/udacity/fend.git)
+[weather app starter code](https://github.com/udacity/fend.git)
 
 ## Table of Contents
 
