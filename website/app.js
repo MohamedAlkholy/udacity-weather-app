@@ -6,8 +6,6 @@ let d = new Date();
 let newDate = d.getMonth() + 1 + "." + d.getDate() + "." + d.getFullYear();
 // Personal API Key for OpenWeatherMap API
 const APIKey = "24004ea06a8d8beb552f7612e67c3629";
-// URL
-// "api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}&units=metric"
 
 // generateData function
 const generateData = async () => {
