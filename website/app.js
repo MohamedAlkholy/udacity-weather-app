@@ -3,10 +3,9 @@ const generateBtn = document.getElementById("generate");
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
-
+let newDate = d.getMonth() + 1 + "." + d.getDate() + "." + d.getFullYear();
 // Personal API Key for OpenWeatherMap API
-APIKey = "24004ea06a8d8beb552f7612e67c3629";
+const APIKey = "24004ea06a8d8beb552f7612e67c3629";
 // URL
 // "api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}&units=metric"
 
@@ -16,7 +15,7 @@ const generateData = async () => {
   const feelings = document.getElementById("feelings").value;
 
   // call fetchData
-  const data = await fetchData(zipCode);
+  const data = await fetchData(zipCode, APIKey);
   if (data) {
     const {
       main: { temp },
@@ -77,10 +76,10 @@ const getData = async () => {
 };
 
 // get data from weather app
-const fetchData = async (code) => {
+const fetchData = async (code, key) => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?zip=${code},&appid=${APIKey}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?zip=${code},&appid=${key}&units=metric`
     );
     const responseData = await response.json();
     if (responseData.cod !== 200) {
