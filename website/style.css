@@ -1,4 +1,4 @@
-. {
+* {
   margin: 0;
   padding: 0;
 }
@@ -50,15 +50,6 @@ body {
 
 .feel {
   margin-top: 3rem;
-}
-
-#date {
-}
-
-#temp {
-}
-
-#content {
 }
 
 .title {
